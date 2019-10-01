@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Main from '../components/Main'
 import API from '../components/API'
+import Discount from '../components/Discount'
 import styles from './index.module.scss'
 
 function onGetAccessClick() {
@@ -24,6 +25,7 @@ const IndexPage = ({ intl }) => (
     <SEO title="Santiment's Neuro - Crypto’s Most Comprehensive API" />
     <Main />
     <API />
+    <Discount />
   </Layout>
 )
 

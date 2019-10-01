@@ -1,5 +1,6 @@
 import React from 'react'
 import Testimonials from '../Testimonials/Testimonials'
+import Subtitle from '../Subtitle/Subtitle'
 import { injectIntl, Link } from 'gatsby-plugin-intl'
 import { trStr } from '../../utils/translate'
 import styles from './index.module.scss'
@@ -52,7 +53,9 @@ export default injectIntl(({ intl }) => (
 
       <div>
         <h4 className={styles.product}>SanAPI</h4>
-        <h2 className={styles.title}>MVRV, Dev Activity, 125+ metrics </h2>
+        <Subtitle className={styles.title}>
+          MVRV, Dev Activity, 125+ metrics
+        </Subtitle>
         <p className={styles.text}>
           Leverage visualizations and signals on Sanbase, or develop your own
           hybrid indicators from the vast suite of onchain, social, project and

@@ -1,8 +1,10 @@
-@import '~@santiment-network/ui/mixins.scss';
+@import '~@santiment-network/ui/mixins';
+@import '~@santiment-network/ui/variables';
 
 .footer {
   background: #181b2b;
   padding: 24px 0;
+  border-top: 1px solid $rhino;
 
   @include responsive('tablet') {
     max-width: 768px;
