@@ -10,7 +10,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import GoogleAnalytics from 'react-ga'
 import StripeProviderSSR from './StripeProviderSSR'
-import Intercom from './Intercom'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Notifications from './Notifications/Notifications'
@@ -32,17 +31,15 @@ const envScript = process.env.NODE_ENV === 'production' && (
 
 const Layout = ({ children, isAccountPage, classes = {} }) => (
   <StripeProviderSSR>
-    <Intercom>
-      <Notifications>
-        <div className={styles.container}>
-          {envScript}
-          <Header isAccountPage={isAccountPage} />
-          <main className={cx(styles.main, classes.main)}>{children}</main>
-          <Footer />
-        </div>
-      </Notifications>
+    <Notifications>
+      <div className={styles.container}>
+        {envScript}
+        <Header isAccountPage={isAccountPage} />
+        <main className={cx(styles.main, classes.main)}>{children}</main>
+        <Footer />
+      </div>
       <CookiePopup />
-    </Intercom>
+    </Notifications>
   </StripeProviderSSR>
 )
 

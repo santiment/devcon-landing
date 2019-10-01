@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Slider from 'react-slick'
 import Title from '../Title/Title'
 import FluidItem from './FluidItem/FluidItem'
-import { tr } from '../../utils/translate'
+import { tr, trStr } from '../../utils/translate'
 import styles from './Testimonials.module.scss'
 
 const settings = {
@@ -14,17 +14,6 @@ const settings = {
   slidesToScroll: 1,
   arrows: false,
 }
-
-const pics = [
-  'nasty',
-  'ibis',
-  'dima',
-  'yura',
-  'thumbs_up',
-  'hand',
-  'nemo',
-  'garry',
-]
 
 const testimonials = ['paolo', 'pramesh', 'yan']
 
@@ -39,13 +28,9 @@ const Testimonials = ({ intl }) => {
 
   return (
     <section className={styles.wrapper}>
-      {pics.map(pic => (
-        <FluidItem key={pic} pic={pic} />
-      ))}
       <Title className={styles.title}>
-        {intl.formatMessage({ id: 'testimonials.title.top' })}
-        <br />
-        {intl.formatMessage({ id: 'testimonials.title.bottom' })}
+        {trStr(intl, 'testimonials.title.top')}{' '}
+        {trStr(intl, 'testimonials.title.bottom')}
       </Title>
       <div className={styles.slider}>
         <div

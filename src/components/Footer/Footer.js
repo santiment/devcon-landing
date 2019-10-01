@@ -19,46 +19,48 @@ const Footer = ({ intl }) => {
   const { link, label } = langProps[+isJapanese()]
   return (
     <footer className={styles.footer}>
-      <div>
-        <Link to={link} className={cx(styles.text, styles.link)}>
-          <img alt='planet' src={planetSvg} className={styles.planet} />
-          {label}
-        </Link>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://santiment.net/about-santiment/'
-          className={cx(styles.text, styles.link)}
-        >
-          {intl.formatMessage({ id: 'footer.about' })}
-        </a>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://santiment.net/about-santiment/contact/'
-          className={cx(styles.text, styles.link)}
-        >
-          {intl.formatMessage({ id: 'footer.contact' })}
-        </a>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://santiment.net/terms-conditions/'
-          className={cx(styles.text, styles.link)}
-        >
-          {intl.formatMessage({ id: 'footer.terms' })}
-        </a>
-        <a
-          rel='noopener noreferrer'
-          target='_blank'
-          href='https://app.santiment.net/privacy-policy'
-          className={cx(styles.text, styles.link)}
-        >
-          {intl.formatMessage({ id: 'footer.privacy' })}
-        </a>
-      </div>
-      <div className={cx(styles.text, styles.rights)}>
-        {intl.formatMessage({ id: 'footer.rights' })}
+      <div className={styles.container}>
+        <div>
+          <Link to={link} className={cx(styles.text, styles.link)}>
+            <img alt='planet' src={planetSvg} className={styles.planet} />
+            {label}
+          </Link>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://santiment.net/about-santiment/'
+            className={cx(styles.text, styles.link)}
+          >
+            {intl.formatMessage({ id: 'footer.about' })}
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://santiment.net/about-santiment/contact/'
+            className={cx(styles.text, styles.link)}
+          >
+            {intl.formatMessage({ id: 'footer.contact' })}
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://santiment.net/terms-conditions/'
+            className={cx(styles.text, styles.link)}
+          >
+            {intl.formatMessage({ id: 'footer.terms' })}
+          </a>
+          <a
+            rel='noopener noreferrer'
+            target='_blank'
+            href='https://app.santiment.net/privacy-policy'
+            className={cx(styles.text, styles.link)}
+          >
+            {intl.formatMessage({ id: 'footer.privacy' })}
+          </a>
+        </div>
+        <div className={cx(styles.text, styles.rights)}>
+          {intl.formatMessage({ id: 'footer.rights' })}
+        </div>
       </div>
     </footer>
   )

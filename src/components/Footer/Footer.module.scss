@@ -1,8 +1,8 @@
 @import '~@santiment-network/ui/mixins.scss';
 
 .footer {
-  max-width: 1140px;
-  margin: 150px auto 0;
+  background: #181b2b;
+  padding: 24px 0;
 
   @include responsive('tablet') {
     max-width: 768px;
@@ -14,32 +14,11 @@
   }
 }
 
-.categories {
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.category {
-  display: flex;
-  flex-direction: column;
-
-  @include responsive('phone', 'phone-xs') {
-    width: 50%;
-    text-align: center;
-  }
-
-  &__title {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    margin-bottom: 16px;
-  }
-
-  &__item {
-    margin-bottom: 14px;
-  }
 }
 
 .text {

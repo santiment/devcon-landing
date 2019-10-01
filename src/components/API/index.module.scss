@@ -1,0 +1,128 @@
+@import '~@santiment-network/ui/mixins';
+@import '~@santiment-network/ui/variables';
+
+.wrapper {
+  display: flex;
+  padding: 80px 0;
+}
+
+.product {
+  @include text('body-3');
+  color: var(--casper);
+}
+
+.title {
+  @include text('h3');
+  margin: 8px 0 16px;
+}
+
+.links {
+  margin: 24px 0 0;
+  color: var(--jungle-green);
+}
+
+.link {
+}
+
+.window {
+  position: relative;
+  border: 1px solid var(--porcelain);
+  border-radius: 10px;
+  padding: 15px 14px 0;
+  overflow: hidden;
+  margin-right: 62px;
+  min-width: 620px;
+}
+
+.code {
+  border: 1px solid #f2f4fa;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #fff;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    display: none;
+  }
+
+  :global(&__keyword) {
+    color: var(--dodger-blue);
+    font-size: 14px;
+  }
+
+  &__header {
+    height: 36px;
+    padding: 11px;
+    line-height: 0;
+    border-bottom: 1px solid #f2f4fa; // NOTE(vanguard): Undefined color
+  }
+
+  &__btn {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: var(--porcelain);
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  :global(&__number) {
+    user-select: none;
+    margin-right: 36px;
+    font-size: 14px;
+    color: #9faac4;
+  }
+
+  :global(&__tab) {
+    margin-right: 15px;
+  }
+}
+
+.source {
+  padding: 20px 14px 0;
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    background: #f2f4fa;
+  }
+
+  &__line {
+    font-size: 14px;
+  }
+}
+
+.gathered {
+  position: absolute;
+  background: var(--white);
+  box-shadow: 0px 4px 50px rgba(56, 74, 167, 0.04),
+    0px 60px 40px rgba(56, 74, 167, 0.02);
+  border-radius: 8px;
+  padding: 36px 45px 25px;
+  width: 266px;
+  height: 218px;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('./gathered.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+
+  &__percent {
+    @include text('h3', 'm');
+  }
+
+  &__label {
+    @include text('body-3');
+    color: var(--waterloo);
+  }
+}
