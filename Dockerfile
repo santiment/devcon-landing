@@ -13,4 +13,4 @@ RUN yarn install --production
 
 COPY ./ /app
 
-RUN yarn start
+RUN yarn build
