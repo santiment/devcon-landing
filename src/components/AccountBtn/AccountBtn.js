@@ -8,7 +8,7 @@ import styles from './AccountBtn.module.scss'
 
 const btnProps = {
   false: {
-    accent: 'blue',
+    accent: 'positive',
     border: true,
     className: styles.login,
     children: intl =>

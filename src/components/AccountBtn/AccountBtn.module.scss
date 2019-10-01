@@ -1,11 +1,18 @@
+@import '~@santiment-network/ui/variables';
+
 .login {
   padding: 6px 35px;
+  background: none;
+  --btn-accent-color: #{$mystic};
 }
 
 .account {
   display: inline-block;
   vertical-align: middle;
+  background: none;
+  fill: $mystic;
+
   &:hover {
-    fill: var(--dodger-blue);
+    fill: $jungle-green;
   }
 }

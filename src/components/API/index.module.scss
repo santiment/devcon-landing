@@ -6,33 +6,6 @@
   padding: 80px 0;
 }
 
-.product {
-  @include text('body-3');
-  color: var(--casper);
-}
-
-.title {
-  margin: 8px 0 16px;
-}
-
-.links {
-  margin: 24px 0 0;
-  color: var(--jungle-green);
-}
-
-.link {
-}
-
-.window {
-  position: relative;
-  border: 1px solid var(--porcelain);
-  border-radius: 10px;
-  padding: 15px 14px 0;
-  overflow: hidden;
-  margin-right: 62px;
-  min-width: 620px;
-}
-
 .code {
   border: 1px solid #f2f4fa;
   box-sizing: border-box;
