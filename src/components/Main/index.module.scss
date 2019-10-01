@@ -13,6 +13,8 @@
   padding: 193px 0 0;
   background: url('./lines.svg') no-repeat 0 100%, url('./bg.svg') no-repeat,
     $cloud-burst;
+  position: relative;
+  background-size: contain, cover;
 }
 
 .title {
@@ -66,5 +68,23 @@
 
   &__link {
     margin-right: 50px;
+  }
+}
+
+.maker {
+  bottom: 14%;
+  left: 15%;
+
+  &__title {
+    color: $jungle-green;
+  }
+}
+
+.eth {
+  bottom: 28%;
+  right: 10%;
+
+  &__title {
+    color: $dodger-blue;
   }
 }

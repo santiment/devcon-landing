@@ -1,9 +1,34 @@
 import React from 'react'
+import Tooltip from './Tooltip'
 import styles from './index.module.scss'
+
+const maker = {
+  title: 'Maker(MKR)',
+  date: 'Jul 18, 2019',
+  classes: { wrapper: styles.maker, title: styles.maker__title },
+  values: [
+    { value: '$473.44', label: 'Price' },
+    { value: '$6,811,431,345.00', label: 'Volume' },
+    { value: '96.00', label: 'Network Growth' },
+  ],
+}
+
+const eth = {
+  title: 'Ethereum',
+  date: 'Jul 21, 2019',
+  classes: { wrapper: styles.eth, title: styles.eth__title },
+  values: [
+    { value: '$473.44', label: 'Price' },
+    { value: '$6,811,431,345.00', label: 'Volume' },
+    { value: '2nd', label: 'Trending position' },
+  ],
+}
 
 export default () => (
   <section className={styles.wrapper}>
     <div className={styles.top}>
+      <Tooltip {...maker} />
+      <Tooltip {...eth} />
       <h1 className={styles.title}>CRYPTO. SMARTER.</h1>
       <h3 className={styles.subtitle}>
         get a stable, reliable, all-inclusive source of targeted intelligence
