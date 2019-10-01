@@ -1,0 +1,70 @@
+@import '~@santiment-network/ui/mixins';
+@import '~@santiment-network/ui/variables';
+
+.wrapper {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+}
+
+.top {
+  color: $white;
+  height: 700px;
+  padding: 193px 0 0;
+  background: url('./lines.svg') no-repeat 0 100%, url('./bg.svg') no-repeat,
+    $cloud-burst;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 62px;
+  line-height: 66px;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.subtitle {
+  @include text('body-1');
+  color: $mystic;
+  max-width: 440px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bottom {
+  background: $ebony-clay;
+  height: 352px;
+  display: flex;
+  align-items: center;
+}
+
+.infos {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.info {
+  flex: 1;
+  &:first-child {
+    margin-right: 112px;
+  }
+
+  &__title {
+    color: $white;
+    @include text('h3');
+  }
+
+  &__text {
+    color: $mystic;
+    margin: 24px 0 0 32px;
+  }
+
+  &__links {
+    margin-top: 32px;
+  }
+
+  &__link {
+    margin-right: 50px;
+  }
+}

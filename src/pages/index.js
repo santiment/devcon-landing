@@ -4,6 +4,7 @@ import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Main from '../components/Main'
 import Pricing from '../components/Pricing'
 import WhySantiment from '../components/WhySantiment/WhySantiment'
 import Advantages from '../components/Advantages/Advantages'
@@ -51,6 +52,7 @@ function onDocumentationClick() {
 const IndexPage = ({ intl }) => (
   <Layout>
     <SEO title="Santiment's Neuro - Crypto’s Most Comprehensive API" />
+    <Main />
     <section className={styles.wrapper}>
       <div>
         <h1 className={styles.title}>

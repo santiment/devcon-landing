@@ -6,11 +6,6 @@ body {
   color: var(--mirage);
   font-size: 16px;
   line-height: 24px;
-  --jungle-green: var(--dodger-blue);
-  --green: var(--dodger-blue);
-  --jungle-green-hover: var(--dodger-blue-hover);
-  --green-hover: var(--dodger-blue-hover);
-  --jungle-green-light: var(--dodger-blue-light);
 }
 
 * {
@@ -23,8 +18,12 @@ body {
   color: inherit;
 }
 
-a:hover {
-  color: var(--dodger-blue);
+a {
+  color: var(--jungle-green);
+
+  &:hover {
+    color: var(--jungle-green-hover);
+  }
 }
 
 section {
@@ -38,14 +37,6 @@ section {
   @include responsive('phone', 'phone-xs') {
     width: 100%;
     padding: 0 15px;
-  }
-}
-
-.main {
-  margin-top: 120px;
-
-  @include responsive('phone', 'phone-xs') {
-    margin-top: 60px;
   }
 }
 

@@ -1,13 +1,15 @@
 @import '~@santiment-network/ui/mixins.scss';
 @import '~@santiment-network/ui/variables.scss';
+
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
+  padding: 14px 0;
   user-select: none;
-  max-width: 1140px;
-  margin: 0 auto;
+  border-bottom: 1px solid $fiord;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
   @include responsive('tablet') {
     max-width: 768px;
@@ -19,57 +21,14 @@
   }
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-
-  &:hover {
-    color: var(--mirage);
-  }
-
-  &__icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-  }
-
-  &__title {
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 0.8;
-    margin-bottom: 3px;
-  }
-
-  &__desc {
-    color: var(--waterloo);
-    font-size: 13px;
-    line-height: 1;
-  }
-}
-
-:global(#hamburger) {
-  display: none;
-}
-
-:global([for='hamburger']) {
-  @include responsive('desktop', 'laptop', 'tablet') {
-    display: none;
-  }
-}
-
-.close {
-  position: absolute;
-  top: 24px;
-  right: 19px;
-  fill: var(--white);
-}
-
 .nav {
+  max-width: 1140px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+
   @include responsive('phone', 'phone-xs') {
     display: none;
     position: fixed;
@@ -90,13 +49,29 @@
 }
 
 .link {
-  font-size: 14px;
-  color: var(--waterloo);
-  margin-right: 35px;
+  @include text('body-3');
+  color: $mystic;
+  margin-right: 40px;
+}
 
-  @include responsive('phone', 'phone-xs') {
-    margin-right: 0;
-    margin-bottom: 20px;
-    color: var(--athens);
-  }
+.devcon {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 40px;
+  background: linear-gradient(
+    90deg,
+    #faa39f -14.43%,
+    #ffb297 22.1%,
+    #c7e977 50.15%,
+    #83dffa 76.25%,
+    #9eafeb 103%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 18px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
 }
