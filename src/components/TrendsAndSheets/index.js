@@ -1,6 +1,8 @@
 import React from 'react'
 import Description from '../Description'
+import MainCodePanel from '../CodePanel/MainCodePanel/MainCodePanel'
 import styles from './index.module.scss'
+import trendsPng from './trends.png'
 
 const trends = {
   product: 'Sanbase, SanAPI',
@@ -31,8 +33,12 @@ const sheets = {
 export default () => (
   <section className={styles.wrapper}>
     <div className={styles.container}>
-      <Description inverse {...trends} className={styles.trends} />
-      <Description {...sheets} />
+      <Description inverse {...trends} className={styles.trends}>
+        <img alt='Trends' src={trendsPng} className={styles.img} />
+      </Description>
+      <Description {...sheets}>
+        <MainCodePanel />
+      </Description>
     </div>
   </section>
 )

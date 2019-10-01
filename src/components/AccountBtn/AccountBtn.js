@@ -32,8 +32,8 @@ const AccountBtn = ({ intl, isAccountPage }) => {
         const { children, ...props } = btnProps[Boolean(currentUser)]
         return (
           <Button
-            as={Link}
-            to='/account'
+            as='a'
+            href='https://app.santiment.net/account'
             variant='flat'
             isActive={isAccountPage}
             {...props}

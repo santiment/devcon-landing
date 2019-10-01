@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../Title/Title'
 import Description from '../Description'
 import styles from './index.module.scss'
+import makerPng from './maker.png'
 
 const description = {
   product: 'Sangraphs',
@@ -20,7 +21,9 @@ export default () => (
   <section className={styles.wrapper}>
     <Title className={styles.title}>Santiment data in action</Title>
     <div className={styles.content}>
-      <Description {...description} />
+      <Description {...description}>
+        <img alt='Maker' src={makerPng} className={styles.img} />
+      </Description>
     </div>
   </section>
 )

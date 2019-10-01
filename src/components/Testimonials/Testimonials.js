@@ -3,7 +3,6 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Slider from 'react-slick'
 import Title from '../Title/Title'
-import FluidItem from './FluidItem/FluidItem'
 import { tr, trStr } from '../../utils/translate'
 import styles from './Testimonials.module.scss'
 
