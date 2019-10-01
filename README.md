@@ -1,8 +1,8 @@
-# Neuro landing page
+# DEVCON landing page
 
-![](./src/images/neuro.png)
+<!-- ![](./src/images/neuro.png) -->
 
-This is the source for [`Neuro Landing Page`](https://neuro.santiment.net).
+This is the source for [`DEVCON Landing Page`](https://devcon.santiment.net).
 
 ## Running locally
 
