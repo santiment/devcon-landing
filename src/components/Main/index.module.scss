@@ -89,12 +89,16 @@
 
     @include responsive('tablet', 'phone', 'phone-xs') {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 160px auto;
     }
   }
 
   &__link {
     margin-right: 50px;
+
+    &:last-child {
+      margin: 0;
+    }
 
     @include responsive('tablet', 'phone', 'phone-xs') {
       margin: 0;

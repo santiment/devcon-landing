@@ -36,7 +36,7 @@ export default () => (
       </h3>
     </div>
     <div className={styles.bottom}>
-      <div className={styles.infos}>
+      <div id='products' className={styles.infos}>
         <div className={styles.info}>
           <h4 className={styles.info__title}>Culture of BUIDLers</h4>
           <div className={styles.info__text}>
@@ -52,16 +52,28 @@ export default () => (
             blockchains like BTC and EOS. Use a variety of ways to see and use
             the data.
             <div className={styles.info__links}>
-              <a href='/' className={styles.info__link}>
+              <a
+                href='https://app.santiment.net/'
+                className={styles.info__link}
+              >
                 Sanbase
               </a>
-              <a href='/' className={styles.info__link}>
+              <a
+                href='https://sheets.santiment.net/'
+                className={styles.info__link}
+              >
                 Sansheets
               </a>
-              <a href='/' className={styles.info__link}>
-                SanAPI
+              <a
+                href='https://neuro.santiment.net/'
+                className={styles.info__link}
+              >
+                Santiment API
               </a>
-              <a href='/' className={styles.info__link}>
+              <a
+                href='https://santiment.net/dashboards'
+                className={styles.info__link}
+              >
                 Sangraphs
               </a>
             </div>

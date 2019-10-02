@@ -23,7 +23,6 @@ export default ({
       {links.map((link, i) => (
         <a
           key={i}
-          href='/'
           className={styles.link}
           target='_blank'
           rel='noopener noreferrer'

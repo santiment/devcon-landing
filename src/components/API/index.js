@@ -1,7 +1,7 @@
 import React from 'react'
 import Testimonials from '../Testimonials/Testimonials'
 import Description from '../Description'
-import { injectIntl, Link } from 'gatsby-plugin-intl'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { trStr } from '../../utils/translate'
 import styles from './index.module.scss'
 

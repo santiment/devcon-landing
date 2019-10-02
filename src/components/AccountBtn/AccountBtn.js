@@ -1,5 +1,5 @@
 import React from 'react'
-import { injectIntl, Link } from 'gatsby-plugin-intl'
+import { injectIntl } from 'gatsby-plugin-intl'
 import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
 import { Query } from 'react-apollo'
