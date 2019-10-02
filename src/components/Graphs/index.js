@@ -11,7 +11,7 @@ const description = {
     'See examples of specialized data in action for one of the hottest projects in crypto. Santiment shows the full picture — from on-chain usage to social volume to revealing financial statistics.',
   links: [
     {
-      href: '/',
+      href: 'https://graphs.santiment.net/makerdao',
       children: 'Explore MakerDAO on Sangraphs',
     },
   ],

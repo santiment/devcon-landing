@@ -21,7 +21,14 @@ export default ({
     <p className={styles.text}>{text}</p>
     <div className={styles.links}>
       {links.map((link, i) => (
-        <a key={i} href='/' className={styles.link} {...link} />
+        <a
+          key={i}
+          href='/'
+          className={styles.link}
+          target='_blank'
+          rel='noopener noreferrer'
+          {...link}
+        />
       ))}
     </div>
   </div>

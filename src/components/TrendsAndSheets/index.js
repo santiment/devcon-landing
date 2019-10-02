@@ -11,7 +11,7 @@ const trends = {
     'Spot tops and bottoms via swings in crowd mood with our unique emerging trends metrics. Spam — filtered and scanned over hundreds of channels for real content inside real conversations.',
   links: [
     {
-      href: '/',
+      href: 'https://app.santiment.net/labs/trends',
       children: 'Try Social Trends on Sanbase',
     },
   ],
@@ -24,7 +24,7 @@ const sheets = {
     'For spreadsheet developers and fans. Pull Santiment data into your Google sheets with our Sansheets add-on. Track tokens you’re interested in, evaluate risk and spot investment opportunities.',
   links: [
     {
-      href: '/',
+      href: 'https://sheets.santiment.net/',
       children: 'Learn more about Sansheets',
     },
   ],

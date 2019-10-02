@@ -24,23 +24,25 @@ const lines = code.split(`\n`).map((line, i) => {
   return `<span class="code__number">${i + 1}</span>${formatted}`
 })
 
+const description = {
+  product: 'SanAPI',
+  title: 'MVRV, Dev Activity, 125+ metrics',
+  text:
+    'Leverage visualizations and signals on Sanbase, or develop your own hybrid indicators from the vast suite of onchain, social, project and fundamental metrics.',
+  links: [
+    {
+      href: 'https://app.santiment.net',
+      children: 'Sanbase',
+    },
+    { href: 'https://neuro.santiment.net/', children: 'SanAPI' },
+  ],
+}
+
 export default injectIntl(({ intl }) => (
   <>
     <section className={styles.wrapper}>
       <div>
-        <Description
-          inverse
-          product='SanAPI'
-          title='MVRV, Dev Activity, 125+ metrics'
-          text='Leverage visualizations and signals on Sanbase, or develop your own hybrid indicators from the vast suite of onchain, social, project and fundamental metrics.'
-          links={[
-            {
-              href: '/',
-              children: 'Sanbase',
-            },
-            { href: '/', children: 'SanAPI' },
-          ]}
-        >
+        <Description inverse {...description}>
           <div className={styles.window}>
             <div className={styles.code}>
               <div className={styles.code__header}>

@@ -6,13 +6,8 @@
   padding: 24px 0;
   border-top: 1px solid $rhino;
 
-  @include responsive('tablet') {
-    max-width: 768px;
-  }
-
-  @include responsive('phone', 'phone-xs') {
-    width: 100%;
-    padding: 0 15px;
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    padding: 60px 0;
   }
 }
 
@@ -21,6 +16,12 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .text {
@@ -28,27 +29,27 @@
   color: var(--waterloo);
 }
 
-.bottom {
-  padding: 28px 0;
-  border-top: 1px solid var(--porcelain);
-  display: flex;
-  justify-content: space-between;
-
-  @include responsive('phone', 'phone-xs') {
-    text-align: center;
+.left {
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    display: flex;
     flex-direction: column;
   }
 }
 
 .rights {
-  color: var(--casper);
-  @include responsive('phone', 'phone-xs') {
-    margin-top: 20px;
+  color: $casper;
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    margin: 40px 0 0;
+    color: $fiord;
   }
 }
 
 .link {
   margin-right: 32px;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    margin: 0 0 32px;
+  }
 
   &:last-child {
     margin: 0;
@@ -57,4 +58,12 @@
 
 .planet {
   margin: 0 6px -3px 0;
+}
+
+.logo {
+  margin: 0 0 40px;
+
+  @include responsive('desktop', 'laptop') {
+    display: none;
+  }
 }

@@ -49,4 +49,18 @@
 }
 
 .link {
+  margin: 0 0 0 20px;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &::after {
+    content: '|';
+    margin: 0 0 0 20px;
+  }
+
+  &:last-child::after {
+    content: '';
+  }
 }

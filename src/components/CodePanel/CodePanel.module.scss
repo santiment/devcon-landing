@@ -7,10 +7,6 @@
   background: #fff;
   min-height: 400px;
 
-  @include responsive('tablet', 'phone', 'phone-xs') {
-    display: none;
-  }
-
   &__header {
     height: 36px;
     padding: 11px;

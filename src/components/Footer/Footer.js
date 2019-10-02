@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import planetSvg from '../../images/planet.svg'
+import santimentSvg from '../../images/santiment.svg'
 import styles from './Footer.module.scss'
 
 const langProps = [
@@ -20,7 +21,11 @@ const Footer = ({ intl }) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div>
+        <div className={styles.left}>
+          <Link className={styles.logo} to='/'>
+            <img alt='Santiment' src={santimentSvg} />
+          </Link>
+
           <Link to={link} className={cx(styles.text, styles.link)}>
             <img alt='planet' src={planetSvg} className={styles.planet} />
             {label}
