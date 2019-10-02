@@ -1,7 +1,9 @@
 import React from 'react'
+import { Mutation } from 'react-apollo'
 import Title from '../Title/Title'
 import Input from '@santiment-network/ui/Input'
 import Button from '@santiment-network/ui/Button'
+import { COUPON_MUTATION } from '../../gql/user'
 import styles from './index.module.scss'
 
 export default () => (
@@ -12,17 +14,38 @@ export default () => (
         drop your email here and get a coupon you can apply to any Santiment
         plan
       </h4>
-      <form className={styles.form}>
-        <Input
-          className={styles.input}
-          type='email'
-          required
-          placeholder='Write your email here'
-        />
-        <Button className={styles.btn} variant='fill' accent='positive'>
-          Get a coupon
-        </Button>
-      </form>
+      <Mutation mutation={COUPON_MUTATION}>
+        {(sendCoupon, { loading }) => (
+          <form
+            className={styles.form}
+            onSubmit={e => {
+              e.preventDefault()
+              sendCoupon({
+                variables: {
+                  email: e.currentTarget.email.value,
+                  lang: 'EN',
+                },
+              })
+            }}
+          >
+            <Input
+              className={styles.input}
+              type='email'
+              required
+              placeholder='Write your email here'
+              name='email'
+            />
+            <Button
+              className={styles.btn}
+              variant='fill'
+              accent='positive'
+              isLoading={loading}
+            >
+              Get a coupon
+            </Button>
+          </form>
+        )}
+      </Mutation>
     </div>
   </section>
 )
