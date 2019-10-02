@@ -10,7 +10,7 @@ import Discount from '../components/Discount'
 
 const IndexPage = ({ intl }) => (
   <Layout>
-    <SEO title="Santiment's Neuro - Crypto’s Most Comprehensive API" />
+    <SEO title='DEVCON5 | Santiment' />
     <Main />
     <Graphs />
     <TrendsAndSheets />

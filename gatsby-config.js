@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Neuro - Crypto’s Most Comprehensive API`,
-    description: `Raw data access to on-chain, social media, development activity and pricing information for 1000+ crypto assets. Unlimited historical and real time data. Backtest strategies, build custom signals, DIY dashboards and much more with the most all-inclusive crypto API on the market.`,
+    title: `DEVCON | Santiment`,
+    description: `Santiment DEVCON5 page`,
     author: `Santiment Team`,
-    siteUrl: 'https://neuro.santiment.net',
+    siteUrl: 'https://devcon.santiment.net',
   },
   plugins: [
     {
