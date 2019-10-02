@@ -12,18 +12,17 @@ export default ({
   links,
   inverse,
 }) => (
-  <div className={cx(styles.wrapper, className, inverse && styles.inverse)}>
-    <div>
-      <h4 className={styles.product}>{product}</h4>
-      <Subtitle className={styles.title}>{title}</Subtitle>
-      <p className={styles.text}>{text}</p>
-      <div className={styles.links}>
-        {links.map((link, i) => (
-          <a key={i} href='/' className={styles.link} {...link} />
-        ))}
-      </div>
+  <div className={cx(styles.wrapper, className)}>
+    <h4 className={styles.product}>{product}</h4>
+    <Subtitle className={styles.title}>{title}</Subtitle>
+    <div className={cx(styles.window, inverse && styles.inverse)}>
+      {children}
     </div>
-
-    <div className={styles.window}>{children}</div>
+    <p className={styles.text}>{text}</p>
+    <div className={styles.links}>
+      {links.map((link, i) => (
+        <a key={i} href='/' className={styles.link} {...link} />
+      ))}
+    </div>
   </div>
 )

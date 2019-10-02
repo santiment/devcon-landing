@@ -21,7 +21,7 @@ const Header = ({ isAccountPage, intl }) => {
           </Link>
           <h2 className={styles.devcon}>DEVCON5</h2>
         </div>
-        <div>
+        <div className={styles.right}>
           <Link className={styles.link} to='/#pricing' onClick={closeNav}>
             Products
           </Link>

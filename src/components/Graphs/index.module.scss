@@ -1,9 +1,19 @@
+@import '~@santiment-network/ui/mixins';
+
 .wrapper {
   margin: 160px auto 60px;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    margin: 80px auto 60px;
+  }
 }
 
 .title {
   margin-bottom: 100px;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    margin-bottom: 70px;
+  }
 }
 
 .content {

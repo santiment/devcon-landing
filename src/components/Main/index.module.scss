@@ -5,6 +5,8 @@
   margin: 0;
   width: 100%;
   max-width: none;
+
+  padding: 0 !important;
 }
 
 .top {
@@ -15,6 +17,13 @@
     $cloud-burst;
   position: relative;
   background-size: contain, cover;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    height: auto;
+    padding: 193px 15px 370px;
+    background-size: initial;
+    background-position: 15% 107%, 0;
+  }
 }
 
 .title {
@@ -38,18 +47,31 @@
   height: 352px;
   display: flex;
   align-items: center;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    height: auto;
+    padding: 80px 15px;
+  }
 }
 
 .infos {
   max-width: 1140px;
   margin: 0 auto;
   display: flex;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    flex-direction: column;
+  }
 }
 
 .info {
   flex: 1;
   &:first-child {
     margin-right: 112px;
+
+    @include responsive('tablet', 'phone', 'phone-xs') {
+      margin: 0 0 60px;
+    }
   }
 
   &__title {
@@ -64,10 +86,22 @@
 
   &__links {
     margin-top: 32px;
+
+    @include responsive('tablet', 'phone', 'phone-xs') {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+    }
   }
 
   &__link {
     margin-right: 50px;
+
+    @include responsive('tablet', 'phone', 'phone-xs') {
+      margin: 0;
+      &:first-child {
+        margin-bottom: 32px;
+      }
+    }
   }
 }
 

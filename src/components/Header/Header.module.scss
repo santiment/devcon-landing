@@ -11,15 +11,6 @@
   left: 0;
   right: 0;
   z-index: 10;
-
-  @include responsive('tablet') {
-    max-width: 768px;
-  }
-
-  @include responsive('phone', 'phone-xs') {
-    width: 100%;
-    padding: 20px 15px;
-  }
 }
 
 .nav {
@@ -30,22 +21,8 @@
   width: 100%;
   margin: 0 auto;
 
-  @include responsive('phone', 'phone-xs') {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: center;
+  @include responsive('tablet', 'phone', 'phone-xs') {
     justify-content: center;
-
-    :global(#hamburger):checked + & {
-      display: flex;
-    }
   }
 }
 
@@ -75,4 +52,10 @@
 .left {
   display: flex;
   align-items: center;
+}
+
+.right {
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    display: none;
+  }
 }

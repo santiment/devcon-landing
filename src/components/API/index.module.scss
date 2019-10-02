@@ -4,6 +4,10 @@
 .wrapper {
   display: flex;
   padding: 80px 0;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    padding: 60px 15px 0;
+  }
 }
 
 .code {

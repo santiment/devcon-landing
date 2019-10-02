@@ -11,6 +11,10 @@
   padding: 16px 18px;
   width: 201px;
   position: absolute;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    display: none;
+  }
 }
 
 .top {
