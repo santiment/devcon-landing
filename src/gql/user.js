@@ -18,15 +18,6 @@ export const CURRENT_USER_QUERY = gql`
   ${userDataFragment}
 `
 
-export const GDPR_MUTATION = gql`
-  mutation updateTermsAndConditions($privacyPolicyAccepted: Boolean!) {
-    updateTermsAndConditions(privacyPolicyAccepted: $privacyPolicyAccepted) {
-      id
-      privacyPolicyAccepted
-    }
-  }
-`
-
 export const COUPON_MUTATION = gql`
   mutation sendPromoCoupon($email: String!, $lang: PromoEmailLangEnum) {
     sendPromoCoupon(email: $email, lang: $lang) {
@@ -41,34 +32,4 @@ export const EMAIL_LOGIN_MUTATION = gql`
       success
     }
   }
-`
-
-export const TRIAL_SUBSCRIPTION_MUTATION = gql`
-  mutation createPromoSubscription($coupon: String!) {
-    createPromoSubscription(couponCode: $coupon) {
-      id
-      trialEnd
-      status
-      plan {
-        id
-        name
-        product {
-          name
-        }
-      }
-    }
-  }
-`
-
-export const VERIFY_EMAIL_MUTATION = gql`
-  mutation emailLoginVerify($email: String!, $token: String!) {
-    emailLoginVerify(email: $email, token: $token) {
-      token
-      user {
-        ...userDataFragment
-      }
-    }
-  }
-
-  ${userDataFragment}
 `
