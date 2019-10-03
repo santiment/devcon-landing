@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 import { injectIntl } from 'gatsby-plugin-intl'
 import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
@@ -28,7 +29,11 @@ const btnProps = {
 const AccountBtn = ({ intl, isAccountPage }) => {
   return (
     <Query query={CURRENT_USER_QUERY}>
-      {({ data: { currentUser } = {} }) => {
+      {({ loading, data: { currentUser } = {} }) => {
+        if (!loading && currentUser && !currentUser.privacyPolicyAccepted) {
+          navigate('/gdpr', { replace: true })
+        }
+
         const { children, ...props } = btnProps[Boolean(currentUser)]
         return (
           <Button

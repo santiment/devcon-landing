@@ -34,3 +34,38 @@ export const COUPON_MUTATION = gql`
     }
   }
 `
+
+export const EMAIL_LOGIN_MUTATION = gql`
+  mutation($email: String!) {
+    emailLogin(email: $email) {
+      success
+    }
+  }
+`
+
+export const TRIAL_SUBSCRIPTION_MUTATION = gql`
+  mutation {
+    createPromoSubscription(couponCode: "#{coupon}") {
+      plan {
+        id
+        name
+        product {
+          name
+        }
+      }
+    }
+  }
+`
+
+export const VERIFY_EMAIL_MUTATION = gql`
+  mutation emailLoginVerify($email: String!, $token: String!) {
+    emailLoginVerify(email: $email, token: $token) {
+      token
+      user {
+        ...userDataFragment
+      }
+    }
+  }
+
+  ${userDataFragment}
+`
