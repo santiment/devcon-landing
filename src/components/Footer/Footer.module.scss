@@ -17,6 +17,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include responsive('laptop') {
+    padding: 0 15px;
+  }
+
   @include responsive('tablet', 'phone', 'phone-xs') {
     flex-direction: column;
     align-items: center;

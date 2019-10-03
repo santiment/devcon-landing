@@ -1,42 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const hotjarScript = (
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `(function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1403198,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
-    }}
-  />
-)
-
-const twitterScript = (
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-// Insert Twitter Pixel ID and Standard Event data below
-twq('init','o0e0e');
-twq('track','PageView');`,
-    }}
-  />
-)
-
 const gtagScript = (
   <script
     dangerouslySetInnerHTML={{
-      __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+      __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-gtag('config', 'UA-100571693-8');`,
+  gtag('config', 'UA-100571693-12');
+      `,
     }}
   />
 )
@@ -53,11 +27,9 @@ export default function HTML(props) {
         />
         {props.headComponents}
         <script src='https://js.stripe.com/v3/' />
-        {hotjarScript}
-        {twitterScript}
         <script
           async
-          src='https://www.googletagmanager.com/gtag/js?id=UA-100571693-8'
+          src='https://www.googletagmanager.com/gtag/js?id=UA-100571693-12'
         />
         {gtagScript}
       </head>

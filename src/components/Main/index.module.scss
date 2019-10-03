@@ -12,6 +12,7 @@
 .top {
   color: $white;
   height: 700px;
+  min-height: 100vh;
   padding: 193px 0 0;
   background: url('./lines.svg') no-repeat 0 100%, url('./bg.svg') no-repeat,
     $cloud-burst;
@@ -47,6 +48,11 @@
   height: 352px;
   display: flex;
   align-items: center;
+
+  @include responsive('laptop') {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   @include responsive('tablet', 'phone', 'phone-xs') {
     height: auto;

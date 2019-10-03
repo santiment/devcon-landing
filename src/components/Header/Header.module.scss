@@ -24,6 +24,10 @@
   @include responsive('tablet', 'phone', 'phone-xs') {
     justify-content: center;
   }
+
+  @include responsive('laptop') {
+    padding: 0 15px;
+  }
 }
 
 .link {

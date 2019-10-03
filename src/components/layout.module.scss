@@ -30,6 +30,10 @@ section {
   max-width: 1140px;
   margin: 0 auto;
 
+  @include responsive('laptop') {
+    padding: 0 15px;
+  }
+
   @include responsive('tablet') {
     max-width: 768px;
   }
@@ -42,8 +46,4 @@ section {
 
 :global(#___gatsby) {
   overflow-x: hidden;
-
-  @include responsive('laptop') {
-    padding: 0 15px;
-  }
 }

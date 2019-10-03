@@ -5,6 +5,10 @@
   display: flex;
   padding: 80px 0;
 
+  @include responsive('laptop') {
+    padding: 80px 15px;
+  }
+
   @include responsive('tablet', 'phone', 'phone-xs') {
     padding: 60px 15px 0;
   }
