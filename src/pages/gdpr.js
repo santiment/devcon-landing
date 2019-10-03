@@ -10,6 +10,7 @@ import {
   TRIAL_SUBSCRIPTION_MUTATION,
 } from '../gql/user'
 import { client } from '../apollo/client'
+import { getCoupon } from '../utils/coupon'
 import styles from './gdpr.module.scss'
 
 const GDPRPage = () => {
@@ -59,11 +60,15 @@ const GDPRPage = () => {
                         mutation: GDPR_MUTATION,
                         variables: { privacyPolicyAccepted: true },
                       })
-                      .then(() =>
-                        client.mutate({
-                          mutation: TRIAL_SUBSCRIPTION_MUTATION,
-                        }),
-                      )
+                      .then(() => {
+                        const coupon = getCoupon()
+                        if (coupon) {
+                          client.mutate({
+                            mutation: TRIAL_SUBSCRIPTION_MUTATION,
+                            variables: { coupon },
+                          })
+                        }
+                      })
                       .catch(console.error)
                   }
                 >

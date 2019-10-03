@@ -44,8 +44,11 @@ export const EMAIL_LOGIN_MUTATION = gql`
 `
 
 export const TRIAL_SUBSCRIPTION_MUTATION = gql`
-  mutation {
-    createPromoSubscription(couponCode: "#{coupon}") {
+  mutation createPromoSubscription($coupon: String!) {
+    createPromoSubscription(couponCode: $coupon) {
+      id
+      trialEnd
+      status
       plan {
         id
         name

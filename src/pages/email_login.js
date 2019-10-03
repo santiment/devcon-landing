@@ -5,6 +5,7 @@ import { parse } from 'query-string'
 import Layout from '../components/layout'
 import PageLoader from '../components/Loader/PageLoader'
 import { CURRENT_USER_QUERY, VERIFY_EMAIL_MUTATION } from '../gql/user'
+import { setCoupon } from '../utils/coupon'
 import styles from './email_login.module.scss'
 
 const updateCache = (
@@ -30,7 +31,9 @@ export default ({ location: { search } }) => (
     <Mutation mutation={VERIFY_EMAIL_MUTATION} update={updateCache}>
       {(verifyEmail, { called, error, data }) => {
         if (!called) {
-          verifyEmail({ variables: parse(search) })
+          const { coupon, ...variables } = parse(search)
+          setCoupon(coupon)
+          verifyEmail({ variables })
         }
         if (error) {
           return (
