@@ -60,8 +60,8 @@
   @include responsive('desktop', 'laptop') {
     margin: 0;
     width: auto;
-    height: 32px;
-    position: absolute;
+    height: 32px !important;
+    position: absolute !important;
     right: 4px;
     top: 4px;
   }

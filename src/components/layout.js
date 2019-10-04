@@ -8,7 +8,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import StripeProviderSSR from './StripeProviderSSR'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Notifications from './Notifications/Notifications'
@@ -23,17 +22,15 @@ const envScript = process.env.NODE_ENV === 'production' && (
 )
 
 const Layout = ({ children, isAccountPage, classes = {} }) => (
-  <StripeProviderSSR>
-    <Notifications>
-      <div className={styles.container}>
-        {envScript}
-        <Header isAccountPage={isAccountPage} />
-        <main className={cx(styles.main, classes.main)}>{children}</main>
-        <Footer />
-      </div>
-      <CookiePopup />
-    </Notifications>
-  </StripeProviderSSR>
+  <Notifications>
+    <div className={styles.container}>
+      {envScript}
+      <Header isAccountPage={isAccountPage} />
+      <main className={cx(styles.main, classes.main)}>{children}</main>
+      <Footer />
+    </div>
+    <CookiePopup />
+  </Notifications>
 )
 
 Layout.propTypes = {
