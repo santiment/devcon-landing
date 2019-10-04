@@ -61,7 +61,6 @@ class MainCodePanel extends React.PureComponent {
                 className={styles.input}
                 onChange={this.changeValue}
                 value={this.state.value}
-                autoFocus
               />
             </Typed>
             <Suggestions currentValue={this.state.value} />
