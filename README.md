@@ -1,6 +1,6 @@
 # DEVCON landing page
 
-<!-- ![](./src/images/neuro.png) -->
+<!-- ![](./src/images/thumbnail.png) -->
 
 This is the source for [`DEVCON Landing Page`](https://devcon.santiment.net).
 

@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import neuro from "../images/neuro.png"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
+import thumbnail from '../images/thumbnail.png'
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -24,11 +24,11 @@ function SEO({ description, lang, meta, title }) {
           }
         }
       }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const imageUrl = `${site.siteMetadata.siteUrl}${neuro}`
+  const imageUrl = `${site.siteMetadata.siteUrl}${thumbnail}`
 
   return (
     <Helmet
@@ -76,7 +76,7 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:image`,
           content: imageUrl,
-        }
+        },
       ].concat(meta)}
     />
   )
