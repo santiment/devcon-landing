@@ -204,7 +204,7 @@
   "sheets.favorites": "Favorites",
   "tooltip.ethereum": "Ethereum",
 
-  "main.text": "get a stable, reliable, all-inclusive source of targeted intelligence for Ethereum and 700+ ERC-20 tokens",
+  "main.text": "Stable, reliable, all-inclusive source of targeted intelligence for Ethereum and 700+ ERC-20 tokens. Get instant free access to all Santiment products for 2 weeks.",
 
   "info.buidl": "Culture of BUIDLers",
   "info.buidl.text": "Santiment is for blockchain developers and software engineers who want high quality raw data about cryptocurrency markets. Help us change the world by building awesome crypto apps.",
@@ -234,6 +234,15 @@
   "desc.api.link":"Sanbase",
 
   "discount.title": "2 weeks trial",
-  "discount.text": "drop your email here and get instant free access to all Santiment products for two weeks",
-  "discount.btn": "Get a coupon"
+  "discount.text": "Get instant free access to all Santiment products for 2 weeks.",
+  "discount.placeholder": "Write your email here",
+  "discount.btn": "Get free trial",
+
+  "products.sanbase": "Sanbase",
+  "products.sheets": "Sansheets",
+  "products.graphs": "Sangraphs",
+  "products.neuro": "Santiment API",
+
+  "links.neuro": "https://neuro.santiment.net",
+  "links.sheets": "https://sheets.santiment.net"
 }

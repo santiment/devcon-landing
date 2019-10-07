@@ -205,7 +205,7 @@
   "sheets.favorites": "お気に入り",
   "tooltip.ethereum": "イーサリアム",
 
-  "main.text": "イーサリアムや700以上のERC-20トークンのただしい情報をワンセットでお届けします。",
+  "main.text": "イーサリアムと700以上のERC-20トークンの充実した総合プラットフォームです。すべてのSantiment製品を2週間無料でお試しいただけます。",
 
   "info.buidl": "開発者やエンジニアの方々に",
   "info.buidl.text": "Santimentは、仮想通貨の高品質生データが必要なブロックチェーンディベロッパーやソフトウエアエンジニアにご利用いただけます。暗号資産アプリケーションの作成にご活用ください。",
@@ -235,7 +235,15 @@
   "desc.api.link":"Sanベース",
 
   "discount.title": "2週間トライアル",
-  "discount.text": "Ｅメールアドレスを登録して、全てのSantiment製品にご利用いただけるクーポンを入手しましょう。",
+  "discount.text": "すべてのSantiment製品を2週間無料でお試しいただけます。",
+  "discount.placeholder": "メールアドレス ",
+  "discount.btn": "フリートライアルを試す",
 
-  "discount.btn": "クーポンをゲット"
+  "products.sanbase": "SANベース",
+  "products.sheets": "SANシート",
+  "products.graphs": "SANグラフ",
+  "products.neuro": "SAN API",
+
+  "links.neuro": "https://neuro.santiment.net/ja",
+  "links.sheets": "https://sheets.santiment.net/ja"
 }
