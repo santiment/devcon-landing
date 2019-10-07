@@ -2,7 +2,6 @@ import React from 'react'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Input from '@santiment-network/ui/Input'
-import { injectIntl } from 'gatsby-plugin-intl'
 import Tooltip from './Tooltip'
 import { tr } from '../../utils/translate'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
@@ -32,7 +31,7 @@ const eth = {
   ],
 }
 
-export default injectIntl(({ intl }) => (
+export default () => (
   <section className={styles.wrapper}>
     <div className={styles.top}>
       <Tooltip {...maker} />
@@ -64,7 +63,7 @@ export default injectIntl(({ intl }) => (
                   className={styles.input}
                   type='email'
                   required
-                  placeholder={intl.formatMessage({ id: 'discount.placeholder' })}
+                  placeholder='Wtite your email here'
                   name='email'
                   onFocus={focusEmailEvent}
                 />
@@ -100,13 +99,13 @@ export default injectIntl(({ intl }) => (
                 {tr('products.sanbase')}
               </a>
               <a
-                href={intl.formatMessage({ id: 'links.sheets' })}
+                href='https://sheets.santiment.net/'
                 className={styles.info__link}
               >
                 {tr('products.sheets')}
               </a>
               <a
-                href={intl.formatMessage({ id: 'links.neuro' })}
+                href='https://neuro.santiment.net/'
                 className={styles.info__link}
               >
                 {tr('products.neuro')}
@@ -123,4 +122,4 @@ export default injectIntl(({ intl }) => (
       </div>
     </div>
   </section>
-))
+)

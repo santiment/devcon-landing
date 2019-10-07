@@ -2,7 +2,6 @@ import React from 'react'
 import { Mutation } from 'react-apollo'
 import Input from '@santiment-network/ui/Input'
 import Button from '@santiment-network/ui/Button'
-import { injectIntl } from 'gatsby-plugin-intl'
 import { NotificationsContext } from '../Notifications/Notifications'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
 import Title from '../Title/Title'
@@ -17,7 +16,7 @@ export const submitEmailEvent = () => {
   window.gtag('event', 'email_submitted')
 }
 
-export default injectIntl(({ intl })  => (
+export default ()  => (
   <section className={styles.wrapper}>
     <div className={styles.container}>
       <Title>{tr('discount.title')}</Title>
@@ -47,7 +46,7 @@ export default injectIntl(({ intl })  => (
                   className={styles.input}
                   type='email'
                   required
-                  placeholder={intl.formatMessage({ id: 'discount.placeholder' })}
+                  placeholder='Write your email here'
                   name='email'
                   onFocus={focusEmailEvent}
                 />
@@ -66,4 +65,4 @@ export default injectIntl(({ intl })  => (
       </NotificationsContext.Consumer>
     </div>
   </section>
-))
+)
