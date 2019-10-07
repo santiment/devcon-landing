@@ -1,5 +1,6 @@
 import React from 'react'
 import Tooltip from './Tooltip'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const maker = {
@@ -14,7 +15,7 @@ const maker = {
 }
 
 const eth = {
-  title: 'Ethereum',
+  title: tr('tooltip.ethereum'),
   date: 'Jul 21, 2019',
   classes: { wrapper: styles.eth, title: styles.eth__title },
   values: [
@@ -30,27 +31,18 @@ export default () => (
       <Tooltip {...maker} />
       <Tooltip {...eth} />
       <h1 className={styles.title}>CRYPTO. SMARTER.</h1>
-      <h3 className={styles.subtitle}>
-        get a stable, reliable, all-inclusive source of targeted intelligence
-        for Ethereum and 700+ ERC-20 tokens
-      </h3>
+      <h3 className={styles.subtitle}>{tr('main.text')}</h3>
     </div>
     <div className={styles.bottom}>
       <div id='products' className={styles.infos}>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>Culture of BUIDLers</h4>
-          <div className={styles.info__text}>
-            Santiment is for blockchain developers and software engineers who
-            want high quality raw data about cryptocurrency markets. Help us
-            change the world by building awesome crypto apps.
-          </div>
+          <h4 className={styles.info__title}>{tr('info.buidl')}</h4>
+          <div className={styles.info__text}>{tr('info.buidl.text')}</div>
         </div>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>Products</h4>
+          <h4 className={styles.info__title}>{tr('info.products')}</h4>
           <div className={styles.info__text}>
-            See the growth of Ethereum, ERC-20 tokens... and even other major
-            blockchains like BTC and EOS. Use a variety of ways to see and use
-            the data.
+            {tr('info.products.text')}
             <div className={styles.info__links}>
               <a
                 href='https://app.santiment.net/'

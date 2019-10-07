@@ -1,7 +1,5 @@
 {
-  "header.metrics": "価格表",
-  "header.use_cases": "活用例",
-  "header.pricing": "プライス",
+  "header.products": "プロダクト",
   "header.support": "サポート",
 
   "main.comprehensive": "多機能",
@@ -204,5 +202,40 @@
   "pricing.discount.note":"ご注意",
   "pricing.discount.note.text":"20％オフを適用するには、1000以上のSANトークンをホールドする必要があります。あなたのウォレットに必要なトークンがあるか、システムで確認されます。",
 
-  "sheets.favorites": "お気に入り"
+  "sheets.favorites": "お気に入り",
+  "tooltip.ethereum": "イーサリアム",
+
+  "main.text": "イーサリアムや700以上のERC-20トークンのただしい情報をワンセットでお届けします。",
+
+  "info.buidl": "開発者やエンジニアの方々に",
+  "info.buidl.text": "Santimentは、仮想通貨の高品質生データが必要なブロックチェーンディベロッパーやソフトウエアエンジニアにご利用いただけます。暗号資産アプリケーションの作成にご活用ください。",
+
+  "info.products": "プロダクト",
+  "info.products.text": "BTCやEOSはもとより、イーサリアム、ERC-20 トークンなどさまざまなコインの情報が得られます。さまざまな角度からデータをチェックし活用しましょう。",
+
+  "products.title": "データの活用",
+
+  "desc.graphs.product":"SANグラフ",
+  "desc.graphs.title":"DeFi/MakerDAO プロジェクト",
+  "desc.graphs.text":"もっとも注目を浴びているプロジェクトの動きを例にとってみてみましょう。オンチェーンの利用からソーシャルボリューム、統計など当社のデータで全体像がつかむことができます。",
+  "desc.graphs.link":"SANグラフでMakerDAO についてもっと知る",
+
+  "desc.trends.product":"Sanベース, SanAPI",
+  "desc.trends.title":"ソーシャル/上昇トレンド",
+  "desc.trends.text":"大衆心理を観察して、最高値や底値、急上昇トレンドをとらえましょう。より正確な情報をつかむため、スパムなどのノイズは取り除きます。",
+  "desc.trends.link":"SANベースでソーシャルトレンドをつかむ",
+
+  "desc.sheets.product":"SANシート",
+  "desc.sheets.title":"多様なスプレッドシートテンプレート",
+  "desc.sheets.text":"スプレッドシートをよく活用される開発者の方々向けです。SANシードアドオンを活用して、あなたのGoogleシートにSantimentデータを取り込みましょう。気になるトークンを追跡し、リスクを考え投資のチャンスをつかみましょう。",
+  "desc.sheets.link":"SAＮシートについてもっと知る",
+
+  "desc.api.title":"MVRV, ディベロッパーアクティビティ, 125以上の指標",
+  "desc.api.text":"SANベースでシグナルをビジュアル化したり、オンチェーン、ソーシャル、プロジェクト、ファンダメンタルメトリックを活用してご自身のシグナルを開発しましょう。",
+  "desc.api.link":"Sanベース",
+
+  "discount.title": "2週間トライアル",
+  "discount.text": "Ｅメールアドレスを登録して、全てのSantiment製品にご利用いただけるクーポンを入手しましょう。",
+
+  "discount.btn": "クーポンをゲット"
 }

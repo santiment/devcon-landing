@@ -1,7 +1,5 @@
 {
-  "header.metrics": "Metrics",
-  "header.use_cases": "Use cases",
-  "header.pricing": "Pricing",
+  "header.products": "Products",
   "header.support": "Support",
 
   "main.comprehensive": "Comprehensive",
@@ -203,5 +201,39 @@
   "pricing.discount.note":"Note",
   "pricing.discount.note.text":"To claim the 20% discount, you just need to hold/HODL enough SAN. The tokens still belong to you - our system simply checks if you have them in your wallet",
 
-  "sheets.favorites": "Favorites"
+  "sheets.favorites": "Favorites",
+  "tooltip.ethereum": "Ethereum",
+
+  "main.text": "get a stable, reliable, all-inclusive source of targeted intelligence for Ethereum and 700+ ERC-20 tokens",
+
+  "info.buidl": "Culture of BUIDLers",
+  "info.buidl.text": "Santiment is for blockchain developers and software engineers who want high quality raw data about cryptocurrency markets. Help us change the world by building awesome crypto apps.",
+
+  "info.products": "Products",
+  "info.products.text": "See the growth of Ethereum, ERC-20 tokens... and even other major blockchains like BTC and EOS. Use a variety of ways to see and use the data.",
+
+  "products.title": "Santiment data in action",
+
+  "desc.graphs.product":"Sangraphs",
+  "desc.graphs.title":"DeFi/MakerDAO Project",
+  "desc.graphs.text":"See examples of specialized data in action for one of the hottest projects in crypto. Santiment shows the full picture — from on-chain usage to social volume to revealing financial statistics.",
+  "desc.graphs.link":"Explore MakerDAO on Sangraphs",
+
+  "desc.trends.product":"Sanbase, SanAPI",
+  "desc.trends.title":"Social/Emerging Trends Study",
+  "desc.trends.text":"Spot tops and bottoms via swings in crowd mood with our unique emerging trends metrics. Spam — filtered and scanned over hundreds of channels for real content inside real conversations.",
+  "desc.trends.link":"Try Social Trends on Sanbase",
+
+  "desc.sheets.product":"Sansheets",
+  "desc.sheets.title":"Powerful Sheets Templates",
+  "desc.sheets.text":"For spreadsheet developers and fans. Pull Santiment data into your Google sheets with our Sansheets add-on. Track tokens you’re interested in, evaluate risk and spot investment opportunities.",
+  "desc.sheets.link":"Learn more about Sansheets",
+
+  "desc.api.title":"MVRV, Dev Activity, 125+ metrics",
+  "desc.api.text":"Leverage visualizations and signals on Sanbase, or develop your own hybrid indicators from the vast suite of onchain, social, project and fundamental metrics.",
+  "desc.api.link":"Sanbase",
+
+  "discount.title": "2 weeks trial",
+  "discount.text": "drop your email here and get instant free access to all Santiment products for two weeks",
+  "discount.btn": "Get a coupon"
 }

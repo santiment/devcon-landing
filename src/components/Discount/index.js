@@ -5,6 +5,7 @@ import Input from '@santiment-network/ui/Input'
 import Button from '@santiment-network/ui/Button'
 import { NotificationsContext } from '../Notifications/Notifications'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const focusEmailEvent = () => {
@@ -18,10 +19,8 @@ const submitEmailEvent = () => {
 export default () => (
   <section className={styles.wrapper}>
     <div className={styles.container}>
-      <Title>2 weeks trial</Title>
-      <h4 className={styles.subtitle}>
-        drop your email here and get a link you can apply to any Santiment plan
-      </h4>
+      <Title>{tr('discount.title')}</Title>
+      <h4 className={styles.subtitle}>{tr('discount.text')}</h4>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
           <Mutation mutation={EMAIL_LOGIN_MUTATION}>
@@ -57,7 +56,7 @@ export default () => (
                   accent='positive'
                   isLoading={loading}
                 >
-                  Get a coupon
+                  {tr('discount.btn')}
                 </Button>
               </form>
             )}
