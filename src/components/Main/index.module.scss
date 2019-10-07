@@ -49,6 +49,8 @@
 
 
 .form {
+  margin-top:32px;
+
   @include responsive('desktop', 'laptop') {
     max-width: 395px;
     margin: 32px auto 0;
