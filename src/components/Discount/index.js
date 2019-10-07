@@ -7,11 +7,11 @@ import { NotificationsContext } from '../Notifications/Notifications'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
 import styles from './index.module.scss'
 
-const focusEmailEvent = () => {
+export const focusEmailEvent = () => {
   window.gtag('event', 'email_focus')
 }
 
-const submitEmailEvent = () => {
+export const submitEmailEvent = () => {
   window.gtag('event', 'email_submitted')
 }
 
@@ -20,7 +20,7 @@ export default () => (
     <div className={styles.container}>
       <Title>2 weeks trial</Title>
       <h4 className={styles.subtitle}>
-        drop your email here and get a link you can apply to any Santiment plan
+        drop your email here and get <strong>instant free access</strong> to all Santiment products for two weeks
       </h4>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
@@ -57,8 +57,8 @@ export default () => (
                   accent='positive'
                   isLoading={loading}
                 >
-                  Get a coupon
-                </Button>
+                Get free trial
+              </Button>
               </form>
             )}
           </Mutation>
