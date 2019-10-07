@@ -1,5 +1,11 @@
 import React from 'react'
+import { Mutation } from 'react-apollo'
+import Button from '@santiment-network/ui/Button'
+import Input from '@santiment-network/ui/Input'
 import Tooltip from './Tooltip'
+import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
+import { NotificationsContext } from '../Notifications/Notifications'
+import {focusEmailEvent, submitEmailEvent} from '../Discount/index'
 import styles from './index.module.scss'
 
 const maker = {
@@ -31,11 +37,52 @@ export default () => (
       <Tooltip {...eth} />
       <h1 className={styles.title}>CRYPTO. SMARTER.</h1>
       <h3 className={styles.subtitle}>
-        get a stable, reliable, all-inclusive source of targeted intelligence
-        for Ethereum and 700+ ERC-20 tokens
+        Stable, reliable, all-inclusive source of targeted intelligence for Ethereum and 700+ ERC-20 tokens. Get instant free access to all Santiment products for 2 weeks.
       </h3>
+      <NotificationsContext.Consumer>
+        {({ add: addNot }) => (
+          <Mutation mutation={EMAIL_LOGIN_MUTATION}>
+            {(sendCoupon, { loading }) => (
+              <form
+                className={styles.form}
+                onSubmit={e => {
+                  e.preventDefault()
+                  submitEmailEvent()
+                  sendCoupon({
+                    variables: {
+                      email: e.currentTarget.email.value,
+                    },
+                  }).then(() => {
+                    addNot({
+                      type: 'success',
+                      title: 'Trial link was sent to your email!',
+                    })
+                  })
+                }}
+              >
+                <Input
+                  className={styles.input}
+                  type='email'
+                  required
+                  placeholder='Write your email here'
+                  name='email'
+                  onFocus={focusEmailEvent}
+                />
+                <Button
+                  className={styles.btn}
+                  variant='fill'
+                  accent='positive'
+                  isLoading={loading}
+                >
+                Get free trial
+              </Button>
+              </form>
+            )}
+          </Mutation>
+        )}
+      </NotificationsContext.Consumer>
     </div>
-    <div className={styles.bottom}>
+    <div className={styles.trigger}>
       <div id='products' className={styles.infos}>
         <div className={styles.info}>
           <h4 className={styles.info__title}>Culture of BUIDLers</h4>

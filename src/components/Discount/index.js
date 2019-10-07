@@ -7,11 +7,11 @@ import { NotificationsContext } from '../Notifications/Notifications'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
 import styles from './index.module.scss'
 
-const focusEmailEvent = () => {
+export const focusEmailEvent = () => {
   window.gtag('event', 'email_focus')
 }
 
-const submitEmailEvent = () => {
+export const submitEmailEvent = () => {
   window.gtag('event', 'email_submitted')
 }
 

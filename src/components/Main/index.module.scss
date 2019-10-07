@@ -38,9 +38,52 @@
 .subtitle {
   @include text('body-1');
   color: $mystic;
-  max-width: 440px;
+  max-width: 501px;
   text-align: center;
   margin: 0 auto;
+}
+
+.trigger {
+   margin: 32px auto 0;
+}
+
+
+.form {
+  @include responsive('desktop', 'laptop') {
+    max-width: 395px;
+    margin: 32px auto 0;
+    border: none;
+    border-radius: 4px;
+    background: none;
+    display: flex;
+    position: relative;
+  }
+}
+
+.input {
+  height: 46px;
+  background: transparent !important;
+  border: 1px solid var(--jungle-green) !important;
+  color: var(--white);
+  outline: none;
+  height: 40px;
+  padding-right: 138px;
+}
+
+.btn {
+  height: 40px;
+  margin: 30px 0 0;
+  width: 100%;
+  justify-content: center;
+  padding: 6px 25px;
+
+  @include responsive('desktop', 'laptop') {
+    margin: 0;
+    width: auto;
+    position: absolute !important;
+    right: 0;
+    top: 0;
+  }
 }
 
 .bottom {
