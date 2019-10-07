@@ -2,6 +2,7 @@ import React from 'react'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Input from '@santiment-network/ui/Input'
+import { injectIntl } from 'gatsby-plugin-intl'
 import Tooltip from './Tooltip'
 import { tr } from '../../utils/translate'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
@@ -21,7 +22,7 @@ const maker = {
 }
 
 const eth = {
-  title: tr('tooltip.ethereum'),
+  title: 'Ethereum',
   date: 'Jul 21, 2019',
   classes: { wrapper: styles.eth, title: styles.eth__title },
   values: [
@@ -31,13 +32,13 @@ const eth = {
   ],
 }
 
-export default () => (
+export default injectIntl(({ intl }) => (
   <section className={styles.wrapper}>
     <div className={styles.top}>
       <Tooltip {...maker} />
       <Tooltip {...eth} />
       <h1 className={styles.title}>CRYPTO. SMARTER.</h1>
-      <h3 className={styles.subtitle}>{tr('main.text')}</h3>
+      <h3 className={styles.subtitle}>{intl.formatMessage({ id: 'main.text'})}</h3>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
           <Mutation mutation={EMAIL_LOGIN_MUTATION}>
@@ -63,7 +64,7 @@ export default () => (
                   className={styles.input}
                   type='email'
                   required
-                  placeholder='Wtite your email here'
+                  placeholder={intl.formatMessage({ id: 'discount.placeholder' })}
                   name='email'
                   onFocus={focusEmailEvent}
                 />
@@ -73,7 +74,7 @@ export default () => (
                   accent='positive'
                   isLoading={loading}
                 >
-                  {tr('discount.btn')}
+                  {intl.formatMessage({ id: 'discount.btn'})}
                 </Button>
               </form>
             )}
@@ -84,37 +85,37 @@ export default () => (
     <div className={styles.bottom}>
       <div id='products' className={styles.infos}>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>{tr('info.buidl')}</h4>
-          <div className={styles.info__text}>{tr('info.buidl.text')}</div>
+          <h4 className={styles.info__title}>{intl.formatMessage({ id: 'info.buidl'})}</h4>
+          <div className={styles.info__text}>{intl.formatMessage({ id: 'info.buidl.text'})}</div>
         </div>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>{tr('info.products')}</h4>
+          <h4 className={styles.info__title}>{intl.formatMessage({ id: 'info.products'})}</h4>
           <div className={styles.info__text}>
-            {tr('info.products.text')}
+            {intl.formatMessage({ id: 'info.products.text'})}
             <div className={styles.info__links}>
               <a
                 href='https://app.santiment.net/'
                 className={styles.info__link}
               >
-                {tr('products.sanbase')}
+                {intl.formatMessage({ id: 'products.sanbase'})}
               </a>
               <a
-                href='https://sheets.santiment.net/'
+                href={intl.formatMessage({ id: 'links.sheets' })}
                 className={styles.info__link}
               >
-                {tr('products.sheets')}
+                {intl.formatMessage({ id: 'products.sheets'})}
               </a>
               <a
-                href='https://neuro.santiment.net/'
+                href={intl.formatMessage({ id: 'links.neuro' })}
                 className={styles.info__link}
               >
-                {tr('products.neuro')}
+                {intl.formatMessage({ id: 'products.neuro'})}
               </a>
               <a
                 href='https://santiment.net/dashboards'
                 className={styles.info__link}
               >
-                {tr('products.graphs')}
+                {intl.formatMessage({ id: 'products.graphs'})}
               </a>
             </div>
           </div>
@@ -122,4 +123,4 @@ export default () => (
       </div>
     </div>
   </section>
-)
+))
