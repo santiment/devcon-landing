@@ -82,7 +82,7 @@ export default () => (
         )}
       </NotificationsContext.Consumer>
     </div>
-    <div className={styles.trigger}>
+    <div className={styles.bottom}>
       <div id='products' className={styles.infos}>
         <div className={styles.info}>
           <h4 className={styles.info__title}>Culture of BUIDLers</h4>
