@@ -1,6 +1,12 @@
 import React from 'react'
+import { Mutation } from 'react-apollo'
+import Button from '@santiment-network/ui/Button'
+import Input from '@santiment-network/ui/Input'
 import Tooltip from './Tooltip'
 import { tr } from '../../utils/translate'
+import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
+import { NotificationsContext } from '../Notifications/Notifications'
+import {focusEmailEvent, submitEmailEvent} from '../Discount/index'
 import styles from './index.module.scss'
 
 const maker = {
