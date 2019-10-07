@@ -2,7 +2,7 @@ import React from 'react'
 import Testimonials from '../Testimonials/Testimonials'
 import Description from '../Description'
 import { injectIntl } from 'gatsby-plugin-intl'
-import { trStr } from '../../utils/translate'
+import { tr, trStr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const code = `#keyword[import] san
@@ -26,13 +26,12 @@ const lines = code.split(`\n`).map((line, i) => {
 
 const description = {
   product: 'SanAPI',
-  title: 'MVRV, Dev Activity, 125+ metrics',
-  text:
-    'Leverage visualizations and signals on Sanbase, or develop your own hybrid indicators from the vast suite of onchain, social, project and fundamental metrics.',
+  title: tr('desc.api.title'),
+  text: tr('desc.api.text'),
   links: [
     {
       href: 'https://app.santiment.net',
-      children: 'Sanbase',
+      children: tr('desc.api.link'),
     },
     { href: 'https://neuro.santiment.net/', children: 'SanAPI' },
   ],

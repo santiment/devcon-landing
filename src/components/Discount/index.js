@@ -1,10 +1,12 @@
 import React from 'react'
 import { Mutation } from 'react-apollo'
-import Title from '../Title/Title'
 import Input from '@santiment-network/ui/Input'
 import Button from '@santiment-network/ui/Button'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { NotificationsContext } from '../Notifications/Notifications'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
+import Title from '../Title/Title'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 export const focusEmailEvent = () => {
@@ -15,13 +17,11 @@ export const submitEmailEvent = () => {
   window.gtag('event', 'email_submitted')
 }
 
-export default () => (
+export default injectIntl(({ intl })  => (
   <section className={styles.wrapper}>
     <div className={styles.container}>
-      <Title>2 weeks trial</Title>
-      <h4 className={styles.subtitle}>
-        drop your email here and get <strong>instant free access</strong> to all Santiment products for two weeks
-      </h4>
+      <Title>{tr('discount.title')}</Title>
+      <h4 className={styles.subtitle}>{tr('discount.text')}</h4>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
           <Mutation mutation={EMAIL_LOGIN_MUTATION}>
@@ -47,7 +47,7 @@ export default () => (
                   className={styles.input}
                   type='email'
                   required
-                  placeholder='Write your email here'
+                  placeholder={intl.formatMessage({ id: 'discount.placeholder' })}
                   name='email'
                   onFocus={focusEmailEvent}
                 />
@@ -57,8 +57,8 @@ export default () => (
                   accent='positive'
                   isLoading={loading}
                 >
-                Get free trial
-              </Button>
+                  {tr('discount.btn')}
+                </Button>
               </form>
             )}
           </Mutation>
@@ -66,4 +66,4 @@ export default () => (
       </NotificationsContext.Consumer>
     </div>
   </section>
-)
+))

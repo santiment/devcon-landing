@@ -1,5 +1,6 @@
 import React from 'react'
 import { injectIntl, Link } from 'gatsby-plugin-intl'
+import { tr } from '../../utils/translate'
 import styles from './Header.module.scss'
 import AccountBtn from '../AccountBtn/AccountBtn'
 import santimentSvg from '../../images/santiment.svg'
@@ -16,10 +17,10 @@ const Header = ({ isAccountPage, intl }) => {
         </div>
         <div className={styles.right}>
           <Link className={styles.link} to='/#products'>
-            Products
+            {tr('header.products')}
           </Link>
           <a className={styles.link} href='mailto:support@santiment.net'>
-            {intl.formatMessage({ id: 'header.support' })}
+            {tr('header.support')}
           </a>
           <AccountBtn isAccountPage={isAccountPage} />
         </div>

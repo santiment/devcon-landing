@@ -1,31 +1,30 @@
 import React from 'react'
 import Description from '../Description'
 import MainCodePanel from '../CodePanel/MainCodePanel/MainCodePanel'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 import trendsPng from './trends.png'
 
 const trends = {
-  product: 'Sanbase, SanAPI',
-  title: 'Social/Emerging Trends Study',
-  text:
-    'Spot tops and bottoms via swings in crowd mood with our unique emerging trends metrics. Spam — filtered and scanned over hundreds of channels for real content inside real conversations.',
+  product: tr('desc.trends.product'),
+  title: tr('desc.trends.title'),
+  text: tr('desc.trends.text'),
   links: [
     {
       href: 'https://app.santiment.net/labs/trends',
-      children: 'Try Social Trends on Sanbase',
+      children: tr('desc.trends.link'),
     },
   ],
 }
 
 const sheets = {
-  product: 'Sansheets',
-  title: 'Powerful Sheets Templates',
-  text:
-    'For spreadsheet developers and fans. Pull Santiment data into your Google sheets with our Sansheets add-on. Track tokens you’re interested in, evaluate risk and spot investment opportunities.',
+  product: tr('desc.sheets.product'),
+  title: tr('desc.sheets.title'),
+  text: tr('desc.sheets.text'),
   links: [
     {
       href: 'https://sheets.santiment.net/',
-      children: 'Learn more about Sansheets',
+      children: tr('desc.sheets.link'),
     },
   ],
 }
