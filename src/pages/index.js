@@ -11,7 +11,7 @@ import Discount from '../components/Discount'
 const IndexPage = ({ intl }) => (
   <Layout>
     <SEO title='DEVCON5 | Santiment' />
-    <Main />
+    {/* <Main /> */}
     {/* <Graphs /> */}
     {/* <TrendsAndSheets /> */}
     {/* <API /> */}
