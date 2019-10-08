@@ -6,7 +6,8 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import Tooltip from './Tooltip'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
 import { NotificationsContext } from '../Notifications/Notifications'
-import {focusEmailEvent, submitEmailEvent} from '../Discount/index'
+import { focusEmailEvent, submitEmailEvent } from '../Discount/index'
+import { tr, trStr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const maker = {
@@ -37,7 +38,7 @@ export default injectIntl(({ intl }) => (
       <Tooltip {...maker} />
       <Tooltip {...eth} />
       <h1 className={styles.title}>CRYPTO. SMARTER.</h1>
-      <h3 className={styles.subtitle}>{intl.formatMessage({ id: 'main.text'})}</h3>
+      <h3 className={styles.subtitle}>{tr('main.text')}</h3>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
           <Mutation mutation={EMAIL_LOGIN_MUTATION}>
@@ -63,7 +64,7 @@ export default injectIntl(({ intl }) => (
                   className={styles.input}
                   type='email'
                   required
-                  placeholder={intl.formatMessage({ id: 'discount.placeholder' })}
+                  placeholder={trStr(intl, 'discount.placeholder')}
                   name='email'
                   onFocus={focusEmailEvent}
                 />
@@ -73,7 +74,7 @@ export default injectIntl(({ intl }) => (
                   accent='positive'
                   isLoading={loading}
                 >
-                  {intl.formatMessage({ id: 'discount.btn'})}
+                  {tr('discount.btn')}
                 </Button>
               </form>
             )}
@@ -84,37 +85,37 @@ export default injectIntl(({ intl }) => (
     <div className={styles.bottom}>
       <div id='products' className={styles.infos}>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>{intl.formatMessage({ id: 'info.buidl'})}</h4>
-          <div className={styles.info__text}>{intl.formatMessage({ id: 'info.buidl.text'})}</div>
+          <h4 className={styles.info__title}>{tr('info.buidl')}</h4>
+          <div className={styles.info__text}>{tr('info.buidl.text')}</div>
         </div>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>{intl.formatMessage({ id: 'info.products'})}</h4>
+          <h4 className={styles.info__title}>{tr('info.products')}</h4>
           <div className={styles.info__text}>
-            {intl.formatMessage({ id: 'info.products.text'})}
+            {tr('info.products.text')}
             <div className={styles.info__links}>
               <a
                 href='https://app.santiment.net/'
                 className={styles.info__link}
               >
-                {intl.formatMessage({ id: 'products.sanbase'})}
+                {tr('products.sanbase')}
               </a>
               <a
-                href={intl.formatMessage({ id: 'links.sheets' })}
+                href={trStr(intl, 'links.sheets')}
                 className={styles.info__link}
               >
-                {intl.formatMessage({ id: 'products.sheets'})}
+                {tr('products.sheets')}
               </a>
               <a
-                href={intl.formatMessage({ id: 'links.neuro' })}
+                href={trStr(intl, 'links.neuro')}
                 className={styles.info__link}
               >
-                {intl.formatMessage({ id: 'products.neuro'})}
+                {tr('products.neuro')}
               </a>
               <a
                 href='https://santiment.net/dashboards'
                 className={styles.info__link}
               >
-                {intl.formatMessage({ id: 'products.graphs'})}
+                {tr('products.graphs')}
               </a>
             </div>
           </div>
