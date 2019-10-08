@@ -47,7 +47,7 @@ export default injectIntl(({ intl }) => (
                   className={styles.input}
                   type='email'
                   required
-                  placeholder='Write your email here'
+                  placeholder={trStr(intl, 'discount.placeholder')}
                   name='email'
                   onFocus={focusEmailEvent}
                 />
