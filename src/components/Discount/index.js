@@ -1,12 +1,12 @@
 import React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Mutation } from 'react-apollo'
 import Input from '@santiment-network/ui/Input'
 import Button from '@santiment-network/ui/Button'
-import { injectIntl } from 'gatsby-plugin-intl'
 import { NotificationsContext } from '../Notifications/Notifications'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
 import Title from '../Title/Title'
-import { tr } from '../../utils/translate'
+import { tr, trStr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 export const focusEmailEvent = () => {
@@ -20,8 +20,8 @@ export const submitEmailEvent = () => {
 export default injectIntl(({ intl }) => (
   <section className={styles.wrapper}>
     <div className={styles.container}>
-      <Title>{intl.formatMessage({ id: 'discount.title'})}</Title>
-      <h4 className={styles.subtitle}>{intl.formatMessage({ id: 'discount.text'})}</h4>
+      <Title>{tr('discount.title')}</Title>
+      <h4 className={styles.subtitle}>{tr('discount.text')}</h4>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
           <Mutation mutation={EMAIL_LOGIN_MUTATION}>
@@ -47,7 +47,7 @@ export default injectIntl(({ intl }) => (
                   className={styles.input}
                   type='email'
                   required
-                  placeholder={intl.formatMessage({ id: 'discount.placeholder'})}
+                  placeholder={trStr(intl, 'discount.placeholder')}
                   name='email'
                   onFocus={focusEmailEvent}
                 />
@@ -57,7 +57,7 @@ export default injectIntl(({ intl }) => (
                   accent='positive'
                   isLoading={loading}
                 >
-                  {intl.formatMessage({ id: 'discount.btn'})}
+                  {tr('discount.btn')}
                 </Button>
               </form>
             )}
