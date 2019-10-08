@@ -12,9 +12,9 @@ const IndexPage = ({ intl }) => (
   <Layout>
     <SEO title='DEVCON5 | Santiment' />
     <Main />
-    <Graphs />
-    <TrendsAndSheets />
-    <API />
+    {/* <Graphs /> */}
+    {/* <TrendsAndSheets /> */}
+    {/* <API /> */}
     <Discount />
   </Layout>
 )
