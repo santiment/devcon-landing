@@ -17,7 +17,7 @@ const Header = ({ isAccountPage, intl }) => {
         </div>
         <div className={styles.right}>
           <Link className={styles.link} to='/#products'>
-            {tr('header.products')}
+            {tr('header.products', "Products")}
           </Link>
           <a className={styles.link} href='mailto:support@santiment.net'>
             {tr('header.support')}

@@ -26,12 +26,12 @@ const lines = code.split(`\n`).map((line, i) => {
 
 const description = {
   product: 'SanAPI',
-  title: tr('desc.api.title'),
-  text: tr('desc.api.text'),
+  title: tr('desc.api.title', "MVRV, Dev Activity, 125+ metrics"),
+  text: tr('desc.api.text', "Leverage visualizations and signals on Sanbase, or develop your own hybrid indicators from the vast suite of onchain, social, project and fundamental metrics."),
   links: [
     {
       href: 'https://app.santiment.net',
-      children: tr('desc.api.link'),
+      children: tr('desc.api.link', "Sanbase"),
     },
     { href: 'https://neuro.santiment.net/', children: 'SanAPI' },
   ],

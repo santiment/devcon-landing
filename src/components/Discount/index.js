@@ -20,8 +20,8 @@ export const submitEmailEvent = () => {
 export default injectIntl(({ intl }) => (
   <section className={styles.wrapper}>
     <div className={styles.container}>
-      <Title>{tr('discount.title')}</Title>
-      <h4 className={styles.subtitle}>{tr('discount.text')}</h4>
+      <Title>{tr('discount.title', "2 weeks trial")}</Title>
+      <h4 className={styles.subtitle}>{tr('discount.text', "Get instant free access to all Santiment products for 2 weeks.")}</h4>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
           <Mutation mutation={EMAIL_LOGIN_MUTATION}>
@@ -33,12 +33,12 @@ export default injectIntl(({ intl }) => (
                   submitEmailEvent()
                   sendCoupon({
                     variables: {
-                      email: e.currentTarget.email.value,
-                    },
+                      email: e.currentTarget.email.value
+                    }
                   }).then(() => {
                     addNot({
                       type: 'success',
-                      title: 'Trial link was sent to your email!',
+                      title: 'Trial link was sent to your email!'
                     })
                   })
                 }}
@@ -57,7 +57,7 @@ export default injectIntl(({ intl }) => (
                   accent='positive'
                   isLoading={loading}
                 >
-                  {tr('discount.btn')}
+                  {tr('discount.btn', "Get free trial")}
                 </Button>
               </form>
             )}

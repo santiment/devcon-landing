@@ -38,7 +38,7 @@ export default injectIntl(({ intl }) => (
       <Tooltip {...maker} />
       <Tooltip {...eth} />
       <h1 className={styles.title}>CRYPTO. SMARTER.</h1>
-      <h3 className={styles.subtitle}>{tr('main.text')}</h3>
+      <h3 className={styles.subtitle}>{tr('main.text', "Stable, reliable, all-inclusive source of targeted intelligence for Ethereum and 700+ ERC-20 tokens. Get instant free access to all Santiment products for 2 weeks.")}</h3>
       <NotificationsContext.Consumer>
         {({ add: addNot }) => (
           <Mutation mutation={EMAIL_LOGIN_MUTATION}>
@@ -74,7 +74,7 @@ export default injectIntl(({ intl }) => (
                   accent='positive'
                   isLoading={loading}
                 >
-                  {tr('discount.btn')}
+                  {tr('discount.btn', "Get free trial")}
                 </Button>
               </form>
             )}
@@ -85,37 +85,37 @@ export default injectIntl(({ intl }) => (
     <div className={styles.bottom}>
       <div id='products' className={styles.infos}>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>{tr('info.buidl')}</h4>
-          <div className={styles.info__text}>{tr('info.buidl.text')}</div>
+          <h4 className={styles.info__title}>{tr('info.buidl', "Culture of BUIDLers")}</h4>
+          <div className={styles.info__text}>{tr('info.buidl.text', "Santiment is for blockchain developers and software engineers who want high quality raw data about cryptocurrency markets. Help us change the world by building awesome crypto apps.")}</div>
         </div>
         <div className={styles.info}>
-          <h4 className={styles.info__title}>{tr('info.products')}</h4>
+          <h4 className={styles.info__title}>{tr('info.products', "Products")}</h4>
           <div className={styles.info__text}>
-            {tr('info.products.text')}
+            {tr('info.products.text', "See the growth of Ethereum, ERC-20 tokens... and even other major blockchains like BTC and EOS. Use a variety of ways to see and use the data.")}
             <div className={styles.info__links}>
               <a
                 href='https://app.santiment.net/'
                 className={styles.info__link}
               >
-                {tr('products.sanbase')}
+                {tr('products.sanbase', "Sanbase")}
               </a>
               <a
                 href={trStr(intl, 'links.sheets')}
                 className={styles.info__link}
               >
-                {tr('products.sheets')}
+                {tr('products.sheets', "Sansheets")}
               </a>
               <a
                 href={trStr(intl, 'links.neuro')}
                 className={styles.info__link}
               >
-                {tr('products.neuro')}
+                {tr('products.neuro', "Santiment API")}
               </a>
               <a
                 href='https://santiment.net/dashboards'
                 className={styles.info__link}
               >
-                {tr('products.graphs')}
+                {tr('products.graphs', "Sangraphs")}
               </a>
             </div>
           </div>
