@@ -11,7 +11,7 @@
     "apollo-link-context": "^1.0.17",
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.2.0",
-    "gatsby": "^2.7.1",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.1.1",
     "gatsby-plugin-env-variables": "^1.0.1",
     "gatsby-plugin-intl": "^0.2.8",
